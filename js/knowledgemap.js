@@ -2,8 +2,8 @@ function demoGraph() {
     d3.json('knowledge.json', function (error, data) {
         if (error) throw error;
 
-        var content = "<div id='knowledgegraph'></div>";
-        d3.select("#knowledgegraphcontent").html(content);
+        var content = "<div id='knowledgemap'></div>";
+        d3.select("#container").html(content);
         drawBubbleGraph(data);
     });
 }
@@ -22,7 +22,7 @@ function drawBubbleGraph(root) {
             return d.rank;
         })
 
-    var svg = d3.select('#knowledgegraph')
+    var svg = d3.select('#knowledgemap')
         .append("svg")
         .attr("width", diameter)
         .attr("height", diameter)
@@ -79,7 +79,7 @@ function drawBubbleGraph(root) {
 
     var node = svg.selectAll("circle,text");
 
-    d3.select('#knowledgegraph')
+    d3.select('#knowledgemap')
         .on("click", function () {
             zoom(root);
         });
