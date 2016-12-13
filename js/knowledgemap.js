@@ -1,27 +1,30 @@
 function demoGraph() {
-    d3.json('knowledge.json', function (error, data) {
+    d3.json('data/data.json', function (error, data) {
         if (error) throw error;
 
         var content = "<div id='knowledgemap'></div>";
         d3.select("#container").html(content);
-        drawBubbleGraph(data);
+        drawBubbleGraph(handleData(data));
     });
 }
 
-
-
-
-function drawBubbleGraph(root) {
-    
-    var diameter = 600, margin = 20;
-
-    var pack = d3.layout
-        .pack()
-        .padding(2)
-        .size([diameter - margin, diameter - margin])
-        .value(function (d) {
+function handleData(data) {
+    var root = d3.hierarchy(data)
+        .sum(function (d) {
             return d.rank;
         })
+        .sort(function (a, b) {
+            return b.data.weight - a.data.weight || b.data.rank - a.data.rank;
+        });
+    return root;
+}
+
+function drawBubbleGraph(root) {
+    var diameter = 600, margin = 20;
+
+    var pack = d3.pack()
+        .padding(2)
+        .size([diameter - margin, diameter - margin]);
 
     var svg = d3.select('#knowledgemap')
         .append("svg")
@@ -30,18 +33,18 @@ function drawBubbleGraph(root) {
         .append("g")
         .attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
 
-    var nodes = pack.nodes(root);
+    var nodes = pack(root).descendants();
     var focus = root, view;
 
     var maxWeight = d3.max(nodes, function (d) {
-        return +d.weight;
+        return +d.data.weight;
     });
     var minWeight = d3.min(nodes, function (d) {
-        return +d.weight;
+        return +d.data.weight;
     });
     console.log("Weight: " + minWeight + "," + maxWeight);
 
-    var color = d3.scale.linear()
+    var color = d3.scaleLinear()
         .domain([minWeight, 0, maxWeight])
         .interpolate(d3.interpolateRgb)
         .range(["black", "gray", "white"]);
@@ -54,7 +57,7 @@ function drawBubbleGraph(root) {
             return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root";
         })
         .style("fill", function (d) {
-            return color(d.weight);
+            return color(d.data.weight);
         })
         .on("click", function (d) {
             if (focus !== d) {
@@ -75,7 +78,7 @@ function drawBubbleGraph(root) {
             return d.parent === root ? "inline" : "none";
         })
         .text(function (d) {
-            return d.name;
+            return d.data.name;
         });
 
     var node = svg.selectAll("circle,text");
@@ -107,11 +110,11 @@ function drawBubbleGraph(root) {
             .style("fill-opacity", function (d) {
                 return d.parent === focus ? 1 : 0;
             })
-            .each("start", function (d) {
+            .on("start", function (d) {
                 if (d.parent === focus)
                     this.style.display = "inline";
             })
-            .each("end", function (d) {
+            .on("end", function (d) {
                 if (d.parent !== focus)
                     this.style.display = "none";
             });
