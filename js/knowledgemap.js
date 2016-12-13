@@ -12,6 +12,7 @@ function demoGraph() {
 
 
 function drawBubbleGraph(root) {
+    
     var diameter = 600, margin = 20;
 
     var pack = d3.layout
