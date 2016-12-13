@@ -39,10 +39,10 @@ function drawBubbleGraph(root) {
     var maxWeight = d3.max(nodes, function (d) {
         return +d.data.weight;
     });
+    
     var minWeight = d3.min(nodes, function (d) {
         return +d.data.weight;
     });
-    console.log("Weight: " + minWeight + "," + maxWeight);
 
     var color = d3.scaleLinear()
         .domain([minWeight, 0, maxWeight])
@@ -81,7 +81,7 @@ function drawBubbleGraph(root) {
             return d.data.name;
         });
 
-    var node = svg.selectAll("circle,text");
+    var node = svg.selectAll("circle, text");
 
     d3.select('#knowledgemap')
         .on("click", function () {
