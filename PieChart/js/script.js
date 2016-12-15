@@ -311,7 +311,7 @@ function draw() {
                 anchor,
                 infoContainer,
                 position;
-
+                
             if ((bBox.x + bBox.width / 2) > 0) {
                 infoContainer = detailedInfo.append('g')
                     .attr('width', infoWidth)
@@ -321,7 +321,7 @@ function draw() {
             } else {
                 infoContainer = detailedInfo.append('g')
                     .attr('width', infoWidth)
-                    .attr('transform', 'translate(' + 0 + ',' + (bBox.height + bBox.y) + ')');
+                    .attr('transform', 'translate(' + 0 + ',' + (bBox.height + bBox.y + 50) + ')');
                 anchor = 'start';
                 position = 'left';
             }
@@ -364,7 +364,7 @@ function draw() {
     }
 
     function drawChart() {
-        d3.json('data/data.json', function (error, data) {
+        d3.json('data/test.json', function (error, data) {
             if (error) throw error;
 
             drawPieChart('pieChart', data.pieChart);

@@ -18,6 +18,7 @@ $c-borderDevider : $c-borderBright;
 
 $c-red  : #d79d91;
 $c-blue : #6bb7c7;
+$c-green: green;
 
 // font-stuff
 $f-family : sans-serif;
@@ -241,6 +242,7 @@ body {
 
 .pieChart--detail__right {
   text-align: right;
+  padding-right: 10px;
 }
 
 .pieChart__blue {
@@ -249,6 +251,10 @@ body {
 
 .pieChart__red {
   fill: $c-red;
+}
+
+.pieChart__green {
+  fill: $c-green;
 }
 
 /**

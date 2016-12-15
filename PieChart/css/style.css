@@ -138,13 +138,17 @@ body {
   text-align: left; }
 
 .pieChart--detail__right {
-  text-align: right; }
+  text-align: right;
+  padding-right: 10px; }
 
 .pieChart__blue {
   fill: #6bb7c7; }
 
 .pieChart__red {
   fill: #d79d91; }
+
+.pieChart__green {
+  fill: green; }
 
 /**
  * Helper classes
