@@ -37,7 +37,7 @@ body {
     left: 50%;
     width: 25%;
     margin: 0 0 0 -12.5%;
-    border-top: 1px dashed adjust-lightness(#333, 40); }
+    border-top: 1px dashed #999999; }
 
 .chart--subHeadline {
   font-weight: 400;
@@ -54,12 +54,6 @@ body {
       top: 10%;
       margin: 5em auto;
       box-shadow: 0 2em 2em #333; } }
-
-.charts--headline {
-  text-align: center;
-  color: #444;
-  background-color: #fff;
-  padding: 1em; }
 
 .lineChart--area {
   fill: url(#lineChart--gradientBackgroundArea); }
@@ -110,7 +104,7 @@ body {
 
 .lineChart--xAxisTicks .tick line, .lineChart--yAxisTicks .tick line {
   fill: none;
-  stroke: adjust-lightness(#333, 50);
+  stroke: #b3b3b3;
   stroke-width: 1;
   stroke-dasharray: 2,2; }
 
@@ -124,7 +118,7 @@ body {
   fill: rgba(255, 255, 255, 0.75); }
 
 .pieChart--detail--divider {
-  stroke: adjust-lightness(#333, 30);
+  stroke: gray;
   stroke-width: 1; }
 
 .pieChart--detail--percentage {

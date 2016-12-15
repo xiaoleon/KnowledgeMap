@@ -9,10 +9,10 @@ $c-baseColorBright: #666;
 
 $c-border           : #eee;
 $c-borderDark       : $c-baseColor;
-$c-borderBright     : adjust-lightness( $c-baseColor, 30 );
-$c-borderBrightPlus : adjust-lightness( $c-baseColor, 50 );
+$c-borderBright     : lighten( $c-baseColor, 30 );
+$c-borderBrightPlus : lighten( $c-baseColor, 50 );
 $c-shadow           : $c-baseColor;
-$c-dashedLine       : adjust-lightness( $c-baseColor, 40 );
+$c-dashedLine       : lighten( $c-baseColor, 40 );
 
 $c-borderDevider : $c-borderBright;
 
@@ -122,13 +122,6 @@ body {
     
     box-shadow: 0 2em 2em $c-shadow;
   }
-}
-
-.charts--headline {
-  text-align: center;
-  color: #444;
-  background-color: #fff;
-  padding: 1em;
 }
 
 .lineChart--area {
