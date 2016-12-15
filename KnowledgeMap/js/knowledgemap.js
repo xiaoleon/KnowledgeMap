@@ -1,5 +1,5 @@
 function demoGraph() {
-    d3.json('data/knowledge.json', function (error, data) {
+    d3.json('data/data.json', function (error, data) {
         if (error) throw error;
 
         var content = "<div id='knowledgemap'></div>";

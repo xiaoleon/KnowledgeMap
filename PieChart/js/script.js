@@ -364,7 +364,7 @@ function draw() {
     }
 
     function drawChart() {
-        d3.json('data/test.json', function (error, data) {
+        d3.json('data/data.json', function (error, data) {
             if (error) throw error;
 
             drawPieChart('pieChart', data.pieChart);
