@@ -1,34 +1,222 @@
 {
     "id": 1,
-    "name": "专业",
-    "rank": 1,
+    "name": "方向",
+    "rank": 49,
     "weight": -51,
     "children": [
         {
             "id": 11,
-            "name": "计算机",
-            "rank": 11,
-            "weight": -30,
+            "name": "虚拟现实",
+            "rank": 142,
+            "weight": -14,
             "children": [
                 {
                     "id": 111,
-                    "name": "计算机科学",
-                    "rank": 200,
-                    "weight": -10,
-                    "children": []
+                    "name": "AR-增强现实",
+                    "rank": 26153,
+                    "weight": -2,
+                    "children": [
+                        {
+                            "id": 1111,
+                            "name": "无介质投影技术",
+                            "rank": 326,
+                            "weight": -6,
+                            "children": []
+                        },
+                        {
+                            "id": 1111,
+                            "name": "用户交互技术",
+                            "rank": 143,
+                            "weight": -1,
+                            "children": []
+                        }
+                    ]
                 },
                 {
                     "id": 112,
-                    "name": "计算机软件",
-                    "rank": 100,
-                    "weight": -5,
-                    "children": []
+                    "name": "VR-虚拟现实",
+                    "rank": 156,
+                    "weight": -8,
+                    "children": [
+                        {
+                            "id": 1111,
+                            "name": "硬件开发技术",
+                            "rank": 32,
+                            "weight": -1,
+                            "children": []
+                        },
+                        {
+                            "id": 1111,
+                            "name": "软件版本更新",
+                            "rank": 84,
+                            "weight": -1,
+                            "children": []
+                        },
+                        {
+                            "id": 1111,
+                            "name": "舒适度调整",
+                            "rank": 115,
+                            "weight": -1,
+                            "children": []
+                        }
+                    ]
                 },
                 {
                     "id": 112,
-                    "name": "计算机硬件",
-                    "rank": 100,
-                    "weight": -5,
+                    "name": "MR-混合现实",
+                    "rank": 348,
+                    "weight": -3,
+                    "children": [
+                        {
+                            "id": 1111,
+                            "name": "多应用切换",
+                            "rank": 18,
+                            "weight": -1,
+                            "children": []
+                        },
+                        {
+                            "id": 1111,
+                            "name": "技术兼容性",
+                            "rank": 11,
+                            "weight": -1,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "name": "生物识别",
+            "rank": 69,
+            "weight": -21,
+            "children": [
+                {
+                    "id": 111,
+                    "name": "虹膜技术",
+                    "rank": 81,
+                    "weight": -3,
+                    "children": [{
+                            "id": 112,
+                            "name": "虹膜纹理采集",
+                            "rank": 169,
+                            "weight": -1,
+                            "children": []
+                        },
+                        {
+                            "id": 112,
+                            "name": "虹膜图像分析",
+                            "rank": 180,
+                            "weight": -1,
+                            "children": []
+                        },
+                        {
+                            "id": 112,
+                            "name": "仿真数据建模",
+                            "rank": 64,
+                            "weight": -1,
+                            "children": []
+                        }]
+                },
+                {
+                    "id": 112,
+                    "name": "生物特征库",
+                    "rank": 105,
+                    "weight": -1,
+                    "children": [
+                        {
+                            "id": 112,
+                            "name": "中科院自动化所",
+                            "rank": 90,
+                            "weight": -1,
+                            "children": []
+                        },
+                        {
+                            "id": 112,
+                            "name": "OpenBR",
+                            "rank": 152,
+                            "weight": -1,
+                            "children": []
+                        },
+                        {
+                            "id": 112,
+                            "name": "Google图像识别",
+                            "rank": 23,
+                            "weight": -1,
+                            "children": []
+                        }
+                    ]
+                },
+                {
+                    "id": 112,
+                    "name": "特征提取技术",
+                    "rank": 204,
+                    "weight": -6,
+                    "children": [
+                        {
+                            "id": 112,
+                            "name": "特征提取传感器",
+                            "rank": 259,
+                            "weight": -1,
+                            "children": []
+                        },
+                        {
+                            "id": 112,
+                            "name": "数据密钥算法",
+                            "rank": 182,
+                            "weight": -1,
+                            "children": []
+                        },
+                        {
+                            "id": 112,
+                            "name": "图像处理算法",
+                            "rank": 124,
+                            "weight": -1,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "name": "支付安全",
+            "rank": 25,
+            "weight": -2,
+            "children": [
+                {
+                    "id": 131,
+                    "name": "信息安全技术",
+                    "rank": 292,
+                    "weight": -9,
+                    "children": []
+                },
+                {
+                    "id": 132,
+                    "name": "移动互联网",
+                    "rank": 1142,
+                    "weight": -8,
+                    "children": []
+                },
+                {
+                    "id": 133,
+                    "name": "跨平台技术",
+                    "rank": 331,
+                    "weight": -8,
+                    "children": []
+                },
+                {
+                    "id": 134,
+                    "name": "电子商务技术",
+                    "rank": 151,
+                    "weight": -8,
+                    "children": []
+                },
+                {
+                    "id": 135,
+                    "name": "用户行为习惯分析",
+                    "rank": 284,
+                    "weight": -2,
                     "children": []
                 }
             ]

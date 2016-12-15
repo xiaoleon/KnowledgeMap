@@ -1,5 +1,5 @@
 function demoGraph() {
-    d3.json('data/data.json', function (error, data) {
+    d3.json('data/knowledge.json', function (error, data) {
         if (error) throw error;
 
         var content = "<div id='knowledgemap'></div>";
@@ -14,7 +14,7 @@ function handleData(data) {
             return d.rank;
         })
         .sort(function (a, b) {
-            return b.data.weight - a.data.weight || b.data.rank - a.data.rank;
+            return b.data.rank - a.data.rank;
         });
     return root;
 }
