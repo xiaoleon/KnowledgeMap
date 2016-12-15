@@ -16,7 +16,7 @@ function handleData(data) {
         .sort(function (a, b) {
             return b.data.rank - a.data.rank;
         });
-    return root;
+    return root; 
 }
 
 function drawBubbleGraph(root) {
